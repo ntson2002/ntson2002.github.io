@@ -120,7 +120,12 @@
     function hello()
     {
         alert("HELLLLL");
+
+        $.getJSON( "files/pubs.json", function( data ) {
+            alert(data);
+        });
     };
+
   </script>
   <input type="button" value="Hello" onclick='hello();'/>
   <div id="pubs">
