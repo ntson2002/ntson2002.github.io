@@ -27,4 +27,9 @@ wc -l <<file>>
 
 
 
-## Search, Replace using command lines in terminal
+## Search, Replace using command lines in terminal with grep, awk, sed
+
+* Find all file names which matched to "abc" 
+```
+ls | grep "abc"
+```
