@@ -7,8 +7,24 @@ date:   2017-12-05 11:00:00
 mathjax: true
 ---
 # Table of contents
-1. [Introduction](#introduction)
+1. [Common tips in terminal](#common-tip-terminal)
 
 
 
-## Introduction <a name="introduction">
+## Common tips in terminal <a name="common-tip-terminal">
+
+### Count
+
+* Count the number of files in a directory
+``` bash
+ls | wc -l
+```
+* Count the number of lines in a file 
+``` bash
+
+wc -l <<file>>
+```
+
+
+
+## Search, Replace using command lines in terminal
