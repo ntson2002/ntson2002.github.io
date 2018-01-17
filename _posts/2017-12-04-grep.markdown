@@ -16,20 +16,22 @@ mathjax: true
 ### Count
 
 * Count the number of files in a directory
+
 ``` bash
 ls | wc -l
+
 ```
 * Count the number of lines in a file 
 
 ``` bash
 wc -l file
+
 ```
-
-
 
 ## Search, Replace using command lines in terminal with grep, awk, sed
 
 * Find all file names which matched to "abc" 
 ```
 ls | grep "abc"
+
 ```
