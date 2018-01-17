@@ -20,9 +20,9 @@ mathjax: true
 ls | wc -l
 ```
 * Count the number of lines in a file 
-``` bash
 
-wc -l <<file>>
+``` bash
+wc -l file
 ```
 
 
