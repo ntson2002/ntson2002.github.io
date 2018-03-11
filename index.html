@@ -1,18 +1,72 @@
----
-layout: default
----
-
-<div class="home">
+<!DOCTYPE html>
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <br>
-        {{ post.excerpt }}
-      </li>
-    {% endfor %}
-  </ul>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nguyen Truong Son's site</title>
+  <link href="./static/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./static/style.css" rel="stylesheet">
+  <link href="./static/css" rel="stylesheet" type="text/css">
+
+  <style type="text/css"></style></head>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+
+<script type="text/javascript">
+
+    $(document).ready(function()
+    {
+        $("#button1").click(function(){
+            alert("HELLLLL");
+
+            $.getJSON( "files/pubs.json", function( data ) {
+                alert(data["test"]);
+            });
+        });
+    });
+
+
+</script>
+
+<div id="header" class="bg1">
+  <!-- <div id="topnav">
+    <ul>
+      <li><a href="http://ntson2002.github.io/">Blog</a></li>
+    </ul>
+  </div> -->
+  <div id="headerblob">
+    <img src="./static/me3_small.png" class="img-circle imgme" style="width:200px; height:200px">
+    <div id="headertext">
+      <div id="htname" style="color: #8C1515">Nguyen Truong Son</div>
+      <div id="htdesc" style="color: #8C1515;">Natural Language Processing lab</div>
+      <div id="htem" style="color: #2a7ae2;"><a href="mailto:nguyen.son@jaist.ac.jp">nguyen.son@jaist.ac.jp</a></div>
+      <div id="icons">
+        <div class="svgico">
+          <a target="_blank" href="https://github.com/ntson2002"><img src="./static/github.png" width="50px" class="img-circle"></a>
+          <a target="_blank" href="https://www.researchgate.net/profile/ntson2002"><img src="./static/researchgate.png" width="50px" class="img-circle"></a>
+          <a target="_blank" href="https://www.linkedin.com/in/ntson2002/"><img src="./static/linkedin.svg" width="50px" class="img-circle"></a>
+          <a target="_blank" href="https://ntson2002.github.io"><img src="./static/blog.svg" width="50px" class="img-circle"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  <b>Bio</b>. I am a PhD student in Natural Language Processing at Nguyen lab, JAIST, Japan.
+
 
 </div>
+
+<hr class="soft">
+<div style="text-align: center">
+  <p> Test a userdefined button: <input id="button1" type="button" value="Hello"/></p>
+</div>
+
+</div>
+</body>
+
+</html>
