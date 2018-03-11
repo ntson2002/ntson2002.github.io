@@ -10,18 +10,9 @@
 
   <style type="text/css"></style></head>
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    ga('create', 'UA-86322230-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-
-<body onload="start()">
+<body>
 
 <div id="header" class="bg1">
   <!-- <div id="topnav">
@@ -47,115 +38,31 @@
   </div>
 </div>
 
-<div class="container">
-  
-  <div class="timelineitem">
-      <div class="tdate">October 2017</div>
-      <div class="ttitle"><a href="http://kse2017.dhsphue.edu.vn/ConferenceProgram.htm" style="color:#333;">The 9th International Conference on Knowledge and Systems Engineering (KSE 2017)</a></div>
-      <div class="tdesc"><span class="thigh">October 19-21 in Hue, Vietnam</span></div>
-      <div> </div>
-    </div>
-
-  <div class="timelineitem">
-      <div class="tdate">August 2017</div>
-      <div class="ttitle"><a href="http://www.sigdial.org/workshops/conference18/" style="color:#333;">The 18th Annual SIGdial Meeting on Discourse and Dialogue (SIGDIAL 2017)</a></div>
-      <div class="tdesc"><span class="thigh">August 15-17 in Saarbrücken, Germany</span></div>
-      <div> </div>
-    </div>
-  
-  <div class="timelineitem">
-      <div class="tdate">August 2017</div>
-      <div class="ttitle"><a href="http://pacling.ucsy.edu.mm/pacling/" style="color:#333;">The 15th International Conference of the Pacific Association for Computational Linguistics (PACLING 2017)</a></div>
-      <div class="tdesc"><span class="thigh">August 16 - 18, 2017 in Yangon, Myanmar </span></div>
-      <div> </div>
-    </div>
-
-  <div class="timelineitem">
-      <div class="tdate">July 2017</div>
-      <div class="ttitle"><a href="http://acl2017.org/" style="color:#333;">Annual Meeting of the Association for Computational Linguistics (ACL 2017)</a></div>
-      <div class="tdesc"><span class="thigh">July 30-August 4, 2017 in Vancouver, Canada</span></div>
-  </div>
-    
-    <!-- <div class="timelineitem">
-      <div class="tdate">Fall 2015</div>
-      <div class="ttitle">Research Semester at CERN</div>
-      <div class="tdesc">Monte Carlo simulation of <span class="thigh">Higgs Radiation</span>.</div>
-    </div>
-    <div class="timelineitem">
-      <div class="tdate">2014</div>
-      <div class="ttitle">Dartmouth's <a href="http://cosanlab.com/">Cosan</a> Lab</div>
-      <div class="tdesc">My advisor is Luke Chang</div>
-    </div>
-    <div class="timelineitem">
-      <div class="tdate">Summer 2014</div>
-      <div class="ttitle"> Oceanography REU at Oregon State</div>
-      <div class="tdesc"><span class="thigh">Nearshore physics</span> and video feature extraction</div>
-    </div>
-    <div class="timelineitem">
-     <div class="tdate">Winter 2013</div>
-      <div class="ttitle">Internship at BigML</div>
-      <div class="tdesc"><span class="thigh">Machine Learning</span> for image classification.</div>
-    </div>
-    <div class="timelineitem">
-      <div class="tdate">2013</div>
-      <div class="ttitle">Dartmouth College</div>
-      <div class="tdesc">Major in <span class="thigh">Physics</span>.</div>
-    </div> -->
-  </div>
-</div>
 
 <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
-  <b>Bio</b>. I am a PhD student in Natural Language Processing at Nguyen lab, JAIST, Japan. My research experience covers natural language generation, deep learning, and Deep Bayesian Nets. I am particularly excited about recurrent neural networks, deep generative models, and the scientific applications of deep learning.
+  <b>Bio</b>. I am a PhD student in Natural Language Processing at Nguyen lab, JAIST, Japan.
 
-<!--   <br><br>I am one of the captains of the Dartmouth Endurance Racing Team and Vice President of the Dartmouth Physics Society. In my free time, I like climbing, fishing, and being outdoors.  Before Dartmouth, I raised pigs in the countryside around Corvallis, Oregon. -->
-  
+
 </div>
 
 <hr class="soft">
+<script type="text/javascript">
 
-<div class="container">
-  <h2>Research</h2>
-
-  <script type="text/javascript">
-    function hello()
+    $(document).ready(function()
     {
-        alert("HELLLLL");
+        $("#button1").click(function(){
+            alert("HELLLLL");
 
-        $.getJSON( "files/pubs.json", function( data ) {
-            alert(data["test"]);
+            $.getJSON( "files/pubs.json", function( data ) {
+                alert(data["test"]);
+            });
         });
-    };
+    });
 
-  </script>
-  <input type="button" value="Hello" onclick='hello();'/>
-  <div id="pubs">
 
-    <div class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="./static/papers/CoNLL-Models.png">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Nested named entity recognition using multilayer recurrent neural networks</div>
-            <div class="pubd">In this paper, we proposed two approaches for the nested named entity recognition task by modeling this task as the multilayer sequence labeling task.</div>
-            <div class="puba">Truong-Son Nguyen, Le-Minh Nguyen</div>
-            <!--<div class="pubv">Acceptance rate: <span class="puba">18.7%</span>. Selected for oral presentation: <span class="puba">20/43</span></div>-->
-            <!--<div class="pubv"></div>-->
-            <div class="publ">
-              <ul>
-                <li><a href="./files/RALSTM-Slides-CoNLL2017.pptx">Oral</a></li>
-                <li><a href="https://www.researchgate.net/publication/317300175_Natural_Language_Generation_for_Spoken_Dialogue_System_using_RNN_Encoder-Decoder_Networks">PDF</a></li>
-                <li><a href="http://www.conll.org/">PACLING 2017</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
 </script>
-</body></html>
+<input id="button1" type="button" value="Hello"/>
+
+</body>
+
+</html>
