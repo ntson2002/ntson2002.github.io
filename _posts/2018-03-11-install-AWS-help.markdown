@@ -9,7 +9,8 @@ mathjax: true
 
 
 
-# Download the certificate file 
+
+# Download the certificate file
 
 ```
 cd $HOME
@@ -31,7 +32,7 @@ sudo chmod 700 storage
 ```
 
 
-# Install CUDA
+# Install CUDA, CuDNN, Conda, Tensorflow
 
 Help: [https://gist.github.com/zhanwenchen/e520767a409325d9961072f666815bb8#install-cuda]()
 
@@ -43,7 +44,7 @@ chmod +x cuda_8.0.61_375.26_linux-run
 ./cuda_8.0.61_375.26_linux.run --extract=/home/ec2-user/storage/downloads
 ```
 
-# step 2: 
+## step 2:
 Execute the second one to install the CUDA Toolkit 8.0:
 
 ```
@@ -51,7 +52,7 @@ rm -r /usr/local/cuda
 sudo ./cuda-linux64-rel-8.0.61-21551265.run
 ```
 
-# step 3:
+## step 3:
 
 modify $HOME/.bashrc to update `LD_LIBRARY_PATH `
 
@@ -61,11 +62,11 @@ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:${LD_LIBRARY_PATH}
 ```
 
 
-# step 4
+## step 4
 Install MiniConda
 ```
 wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
-bash Miniconda2-latest-Linux-x86_64.sh 
+bash Miniconda2-latest-Linux-x86_64.sh
 
 source $HOME/.bashrc
 conda create -n py27 python=2.7
@@ -73,16 +74,16 @@ source activate py27
 conda install cudnn=5.1
 ```
 
-# step 5
+## step 5
 
  modify $HOME/.bashrc
- 
+
 ```
 # cundnn=5.1
 export LD_LIBRARY_PATH=/home/ec2-user/storage/miniconda2/envs/py27/lib:${LD_LIBRARY_PATH}
 ```
 
-# step 6
+## step 6
 Install tensorflow 
 ```
 pip install https://pypi.python.org/packages/04/c4/ffb89dbea9e43e82665ff088fd08aa25aa93301aa8c480de278c8f576ea1/tensorflow_gpu-1.0.1-cp27-cp27mu-manylinux1_x86_64.whl#md5=c06b11dee765a99b1814ca393aaf558a
