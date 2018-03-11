@@ -14,6 +14,22 @@
 
 <body>
 
+<script type="text/javascript">
+
+    $(document).ready(function()
+    {
+        $("#button1").click(function(){
+            alert("HELLLLL");
+
+            $.getJSON( "files/pubs.json", function( data ) {
+                alert(data["test"]);
+            });
+        });
+    });
+
+
+</script>
+
 <div id="header" class="bg1">
   <!-- <div id="topnav">
     <ul>
@@ -46,23 +62,8 @@
 </div>
 
 <hr class="soft">
-<script type="text/javascript">
 
-    $(document).ready(function()
-    {
-        $("#button1").click(function(){
-            alert("HELLLLL");
-
-            $.getJSON( "files/pubs.json", function( data ) {
-                alert(data["test"]);
-            });
-        });
-    });
-
-
-</script>
-<input id="button1" type="button" value="Hello"/>
-
+<p> Test a userdefined button: <input id="button1" type="button" value="Hello"/></p>
 </body>
 
 </html>
