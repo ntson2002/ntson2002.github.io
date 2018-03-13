@@ -12,7 +12,7 @@ mathjax: true
 
 ## Batch normalization in Deep learning
 
-
+* [Normalizing Activations in a Network (C2W3L04)](https://www.youtube.com/watch?v=tNIpEZLv_eg)
 * [Implementing BatchNorm in Neural Net](https://wiseodd.github.io/techblog/2016/07/04/batchnorm/)
 * [Fitting Batch Norm Into Neural Networks (C2W3L05) - Adrew Ng](https://www.youtube.com/watch?v=em6dfRxYkYU)
 * [Why Does Batch Norm Work? (C2W3L06) ](https://www.youtube.com/watch?v=nUUqwaxLnWs&t=529s)
