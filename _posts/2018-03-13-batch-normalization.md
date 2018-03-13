@@ -22,3 +22,9 @@ mathjax: true
 
 ## Batch normalization papers
 * [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167)
+
+
+## Notes
+
+* Keywords: Batch norm in testing time tensorflow
+* [Inconsistent results during test using different batch size](https://discuss.pytorch.org/t/solved-inconsistent-results-during-test-using-different-batch-size/2265)
