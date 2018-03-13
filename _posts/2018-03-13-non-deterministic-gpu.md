@@ -10,4 +10,4 @@ mathjax: true
 
 
 
-* [A Workaround for Non-Determinism in TensorFlow]https://www.twosigma.com/insights/a-workaround-for-non-determinism-in-tensorflow
+* [A Workaround for Non-Determinism in TensorFlow](https://www.twosigma.com/insights/a-workaround-for-non-determinism-in-tensorflow)
