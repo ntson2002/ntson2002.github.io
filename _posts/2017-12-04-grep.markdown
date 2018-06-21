@@ -12,6 +12,28 @@ mathjax: true
 
 
 ## Common tips in terminal <a name="common-tip-terminal">
+
+### .ssh/config
+
+* Push/Pull code from pycharm to github
+
+```
+Host bitbucket.org
+User git
+HostName bitbucket.org
+IdentityFile ~/.ssh/tis_id_rsa
+
+Host sonnguyen2002.bitbucket.org (alias)
+User git
+HostName bitbucket.org (actual host)
+IdentityFile ~/.ssh/id_bitbucket_sonnguyen2002 (key)
+```
+
+* Sample link in .git/config
+```
+git@sonnguyen2002.bitbucket.org:sonnguyen2002/jp-legal-text-preprocessing.git
+```
+
 ### Adding your SSH key to the ssh-agent
   
 ``` bash
