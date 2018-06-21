@@ -12,6 +12,16 @@ mathjax: true
 
 
 ## Common tips in terminal <a name="common-tip-terminal">
+### Adding your SSH key to the ssh-agent
+  
+``` bash
+$ eval `ssh-agent`
+```
+
+``` bash
+$ ssh-add path_of_key (no need extension)
+```
+
 
 ### Count
 
