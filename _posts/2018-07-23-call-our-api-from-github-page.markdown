@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "Call our API from Github pages"
-excerpt: "Rerouting"
+excerpt: "Call our API from Github pages"
 date:   2018-07-23 11:00:00
 mathjax: true
 ---
