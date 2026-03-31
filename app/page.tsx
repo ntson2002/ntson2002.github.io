@@ -1,12 +1,12 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 import {
   BookOpen,
   Building2,
   GraduationCap,
   Mail,
-  Phone,
   BookMarked,
   FlaskConical,
   Users,
@@ -22,13 +22,22 @@ export default function CVPage() {
         {/* Header */}
         <Card className="border-t-4 border-t-blue-600">
           <CardHeader className="pb-4">
-            <div className="flex flex-col gap-1">
-              <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Lý Lịch Khoa Học</p>
-              <h1 className="text-3xl font-bold text-foreground">Nguyễn Trường Sơn</h1>
-              <div className="flex flex-wrap gap-2 mt-1">
-                <Badge variant="secondary">Tiến sỹ</Badge>
-                <Badge variant="secondary">Giảng viên</Badge>
-                <Badge className="bg-blue-600 text-white hover:bg-blue-700">NLP &amp; AI</Badge>
+            <div className="flex items-start gap-5">
+              <Image
+                src="/profile.jpg"
+                alt="Nguyễn Trường Sơn"
+                width={96}
+                height={96}
+                className="rounded-full object-cover shrink-0 border-2 border-blue-100"
+              />
+              <div className="flex flex-col gap-1">
+                <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">Lý Lịch Khoa Học</p>
+                <h1 className="text-3xl font-bold text-foreground">Nguyễn Trường Sơn</h1>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  <Badge variant="secondary">Tiến sỹ</Badge>
+                  <Badge variant="secondary">Giảng viên</Badge>
+                  <Badge className="bg-blue-600 text-white hover:bg-blue-700">NLP &amp; AI</Badge>
+                </div>
               </div>
             </div>
           </CardHeader>
@@ -48,10 +57,6 @@ export default function CVPage() {
               </div>
             </div>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="h-4 w-4 shrink-0" />
-                <span>0933 171 329</span>
-              </div>
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="h-4 w-4 shrink-0" />
                 <a href="mailto:ntson@fit.hcmus.edu.vn" className="text-blue-600 hover:underline">
