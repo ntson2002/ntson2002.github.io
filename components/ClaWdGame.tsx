@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback } from 'react'
-import { Card } from '@/components/ui/card'
+import { Maximize2, Minimize2 } from 'lucide-react'
 
 // ── Canvas dimensions ──────────────────────────────────────────────
 const W = 600
@@ -128,8 +128,18 @@ export default function ClaWdGame() {
     bgScroll: 0, nextObs: 90, fc: 0,
   })
 
-  const [uiPhase,  setUiPhase]  = useState<Phase>('idle')
-  const [uiScore,  setUiScore]  = useState(0)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [uiPhase,      setUiPhase]      = useState<Phase>('idle')
+  const [uiScore,      setUiScore]      = useState(0)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+
+  const toggleFullscreen = useCallback(() => {
+    if (!document.fullscreenElement) {
+      containerRef.current?.requestFullscreen()
+    } else {
+      document.exitFullscreen()
+    }
+  }, [])
 
   const interact = useCallback(() => {
     const s = g.current
@@ -296,15 +306,26 @@ export default function ClaWdGame() {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.code === 'Space' || e.code === 'ArrowUp') { e.preventDefault(); interact() }
+      if (e.code === 'KeyF' || e.code === 'Escape') { /* Escape handled by browser */ }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [interact])
 
+  useEffect(() => {
+    const onChange = () => setIsFullscreen(!!document.fullscreenElement)
+    document.addEventListener('fullscreenchange', onChange)
+    return () => document.removeEventListener('fullscreenchange', onChange)
+  }, [])
+
   return (
-    <Card className="overflow-hidden border-2 border-green-950">
+    <div
+      ref={containerRef}
+      className="overflow-hidden rounded-lg border-2 border-green-950 flex flex-col"
+      style={isFullscreen ? { height: '100vh', background: '#060610' } : {}}
+    >
       {/* Terminal title bar */}
-      <div className="bg-[#060610] px-4 py-2 flex items-center justify-between border-b border-green-950">
+      <div className="bg-[#060610] px-4 py-2 flex items-center justify-between border-b border-green-950 shrink-0">
         <div className="flex items-center gap-3">
           <div className="flex gap-1.5">
             <span className="w-3 h-3 rounded-full bg-red-500 block" />
@@ -313,25 +334,49 @@ export default function ClaWdGame() {
           </div>
           <span className="text-xs font-mono text-green-700">clawd_runner.exe</span>
         </div>
-        <span className="text-xs font-mono text-green-900">
-          {uiPhase === 'play' && `⚡ ${uiScore}`}
-          {uiPhase === 'over' && `💀 ${uiScore}`}
-          {uiPhase === 'idle' && '— READY —'}
-        </span>
+        <div className="flex items-center gap-3">
+          <span className="text-xs font-mono text-green-900">
+            {uiPhase === 'play' && `⚡ ${uiScore}`}
+            {uiPhase === 'over' && `💀 ${uiScore}`}
+            {uiPhase === 'idle' && '— READY —'}
+          </span>
+          <button
+            onClick={toggleFullscreen}
+            className="text-green-800 hover:text-green-500 transition-colors"
+            aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+          >
+            {isFullscreen
+              ? <Minimize2 className="h-4 w-4" />
+              : <Maximize2 className="h-4 w-4" />
+            }
+          </button>
+        </div>
       </div>
 
-      {/* Game canvas */}
-      <canvas
-        ref={canvasRef}
-        width={W}
-        height={H}
-        onClick={interact}
-        className="block w-full cursor-pointer select-none"
-        style={{ imageRendering: 'pixelated', background: '#080814' }}
-      />
+      {/* Game canvas — grows to fill fullscreen space */}
+      <div
+        className="flex items-center justify-center bg-[#080814]"
+        style={isFullscreen ? { flex: 1, overflow: 'hidden' } : {}}
+      >
+        <canvas
+          ref={canvasRef}
+          width={W}
+          height={H}
+          onClick={interact}
+          className="block cursor-pointer select-none"
+          style={{
+            imageRendering: 'pixelated',
+            background: '#080814',
+            ...(isFullscreen
+              ? { width: `min(100vw, calc((100vh - 80px) * ${W / H}))`, height: 'auto' }
+              : { width: '100%' }
+            ),
+          }}
+        />
+      </div>
 
       {/* Status bar */}
-      <div className="bg-[#060610] px-4 py-1.5 border-t border-green-950 flex justify-between items-center">
+      <div className="bg-[#060610] px-4 py-1.5 border-t border-green-950 flex justify-between items-center shrink-0">
         <p className="text-xs font-mono text-green-900">
           {uiPhase === 'idle' && '▶ PRESS SPACE OR CLICK TO START'}
           {uiPhase === 'play'  && '↑ SPACE / CLICK / TAP TO JUMP'}
@@ -339,6 +384,6 @@ export default function ClaWdGame() {
         </p>
         <span className="text-xs font-mono text-green-950">v1.0</span>
       </div>
-    </Card>
+    </div>
   )
 }
