@@ -1,4 +1,5 @@
 import cv from "@/data/cv.json";
+import ClaWdGame from "@/components/ClaWdGame";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -269,6 +270,16 @@ export default function CVPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Mini Game */}
+        <div className="space-y-2">
+          <div className="flex items-center gap-2 px-1">
+            <span className="text-lg">🎮</span>
+            <h2 className="text-base font-semibold text-foreground">CLAWD Runner</h2>
+            <span className="text-xs text-muted-foreground font-mono">— jump over the bugs!</span>
+          </div>
+          <ClaWdGame />
+        </div>
 
         {/* Footer */}
         <div className="text-center text-xs text-muted-foreground pb-4">
