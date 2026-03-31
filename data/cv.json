@@ -1,0 +1,192 @@
+{
+  "name": "Nguyễn Trường Sơn",
+  "dob": "26/10/1984",
+  "gender": "Nam",
+  "degree": "Tiến sỹ",
+  "degreeYear": 2018,
+  "position": "Giảng viên",
+  "workplace": {
+    "university": "Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM",
+    "faculty": "Khoa Công nghệ Thông tin",
+    "department": "Bộ môn Hệ thống Thông tin"
+  },
+  "contact": {
+    "emailWork": "ntson@fit.hcmus.edu.vn",
+    "emailPersonal": "ntson2002@gmail.com"
+  },
+  "languages": [
+    { "skill": "Nghe", "level": "Tốt" },
+    { "skill": "Nói", "level": "Tốt" },
+    { "skill": "Viết", "level": "Tốt" },
+    { "skill": "Đọc hiểu", "level": "Tốt" }
+  ],
+  "workHistory": [
+    {
+      "from": "2006",
+      "to": "nay",
+      "place": "Bộ môn Hệ Thống Thông Tin, Khoa Công nghệ Thông tin, Trường Đại học Khoa học Tự nhiên",
+      "position": "Giảng viên"
+    }
+  ],
+  "education": [
+    {
+      "level": "Đại học",
+      "period": "9/2002 – 6/2006",
+      "school": "ĐH Khoa học Tự nhiên TP.HCM",
+      "major": "Công nghệ thông tin",
+      "thesis": "Nghiên cứu các thuật toán xếp lịch trong trường ĐH và xây dựng ứng dụng minh hoạ"
+    },
+    {
+      "level": "Thạc sỹ",
+      "period": "10/2007 – 10/2010",
+      "school": "ĐH Khoa học Tự nhiên TP.HCM",
+      "major": "Khoa học máy tính",
+      "thesis": "Xây dựng hệ thống giám sát dịch bệnh dựa trên mạng xã hội"
+    },
+    {
+      "level": "Tiến sỹ",
+      "period": "10/2015 – 9/2018",
+      "school": "Viện Khoa học Công nghệ Tiên tiến Nhật Bản (JAIST)",
+      "major": "Khoa học Thông tin",
+      "thesis": "Phân tích cấu trúc và nhận diện suy diễn trong văn bản luật sử dụng phương pháp học sâu"
+    }
+  ],
+  "expertise": {
+    "fields": ["Công nghệ thông tin"],
+    "majors": ["Khoa học máy tính", "Khoa học thông tin"],
+    "specializations": ["Xử lý ngôn ngữ tự nhiên (NLP)", "Trí tuệ nhân tạo (AI)"],
+    "researchDirections": ["Khai thác văn bản", "Xử lý ngôn ngữ tự nhiên", "Học máy"]
+  },
+  "projects": [
+    {
+      "title": "Xây dựng mô hình chọn câu trả lời cho hệ thống hỏi đáp pháp luật Việt Nam",
+      "level": "Cấp trường",
+      "year": "2020",
+      "budget": "50 triệu",
+      "role": "Chủ nhiệm",
+      "result": "Đạt",
+      "code": "CNTT-2020-14"
+    },
+    {
+      "title": "Mô hình gán nhãn ngữ nghĩa y sinh dựa trên ngữ pháp và quan hệ phụ thuộc",
+      "level": "Cấp trường",
+      "year": "2023",
+      "budget": "50 triệu",
+      "role": "Tham gia",
+      "result": "Đạt",
+      "code": null
+    }
+  ],
+  "students": [
+    { "name": "Châu Chiêu Nguyên", "thesis": "Hệ thống hỏi đáp tự động cho văn bản pháp luật Việt Nam", "year": 2021, "level": "Thạc sỹ" },
+    { "name": "Lê Anh Khôi", "thesis": "Kết hợp học tương phản trong tóm tắt văn bản tiếng Việt với mô hình BERT", "year": 2021, "level": "Thạc sỹ" },
+    { "name": "Trần Anh Kiên", "thesis": "Hệ thống thông minh hỗ trợ phân loại thô cho bệnh nhân nhập viện", "year": 2022, "level": "Thạc sỹ" },
+    { "name": "Tiêu Trường Thịnh", "thesis": "Nghiên cứu các phương pháp phân loại cặp cho văn bản luật Việt Nam", "year": 2022, "level": "Thạc sỹ" },
+    { "name": "Đặng Nhật Minh", "thesis": "Kỹ thuật kết hợp câu ngữ cảnh cho bài toán chiết xuất từ vựng khía cạnh", "year": 2023, "level": "Thạc sỹ" },
+    { "name": "Nguyễn Trung Hậu", "thesis": "Nghiên cứu các phương pháp cho bài toán hỏi đáp pháp luật", "year": 2023, "level": "Thạc sỹ" },
+    { "name": "Trần Thanh Mộng", "thesis": "Xây dựng hệ thống Cổng Dịch vụ công theo kiến trúc phân tán", "year": 2024, "level": "Thạc sỹ" },
+    { "name": "Nguyễn Hà Minh Anh", "thesis": "Cải thiện kỹ năng giải toán cho mô hình ngôn ngữ vừa và nhỏ", "year": 2024, "level": "Thạc sỹ" }
+  ],
+  "publications": {
+    "journals": [
+      {
+        "authors": "Son Nguyen Truong, Nguyen Le Minh, Ken Satoh, Tojo Satoshi and Akira Shimazu",
+        "title": "Recurrent neural network-based models for recognizing requisite and effectuation parts in legal texts",
+        "venue": "Artificial Intelligence and Law",
+        "year": "2018",
+        "issn": "0924-8463",
+        "impactFactor": "3.3",
+        "indexed": "ISI"
+      },
+      {
+        "authors": "Collier, Nigel, Nguyen Truong Son, and Ngoc Mai Nguyen",
+        "title": "OMG U got flu? Analysis of shared health messages for bio-surveillance",
+        "venue": "Journal of Biomedical Semantics 2011, 2(Suppl 5):S9",
+        "year": "2011",
+        "issn": "2041-1480",
+        "impactFactor": "2.0",
+        "indexed": "ISI"
+      }
+    ],
+    "conferences": [
+      {
+        "title": "VMLU Benchmarks: A comprehensive benchmark toolkit for Vietnamese LLMs",
+        "venue": "ACL 2025 (The 63rd Annual Meeting of the Association for Computational Linguistics)",
+        "year": "2025",
+        "id": "2025.acllong.563",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "Embedding-Based Retrieval Approaches for Automated Citation Prediction",
+        "venue": "SCIDOCA 2025 (Ninth International Workshop on SCIentific DOCument Analysis)",
+        "year": "2025",
+        "id": "978-981-967070-3",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "Contrastive Learning for Vietnamese Abstractive Summarization",
+        "venue": "KSE 2023",
+        "year": "2023",
+        "id": "979-8-35032975-9",
+        "role": null
+      },
+      {
+        "title": "Ensemble Learning Methods for Legal Processing Tasks in ALQAC 2022",
+        "venue": "14th International Conference on Knowledge and Systems Engineering (KSE)",
+        "year": "2022",
+        "id": "978-1-66545282-3",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "ALQAC 2022: A Summary of the Competition",
+        "venue": "14th International Conference on Knowledge and Systems Engineering (KSE)",
+        "year": "2022",
+        "id": "978-1-66545282-3",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "SPBERT: An Efficient Pre-training BERT on SPARQL Queries for Question Answering over Knowledge Graphs",
+        "venue": "The 28th International Conference on Neural Information Processing (ICONIP 2021)",
+        "year": "2021",
+        "id": "978-3-03092184-2",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "Apply Bert-based models and Domain knowledge for Automated Legal Question Answering tasks at ALQAC 2021",
+        "venue": "13th International Conference on Knowledge and Systems Engineering (KSE)",
+        "year": "2021",
+        "id": "978-1-66549976-7",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "A Summary of the ALQAC 2021 Competition",
+        "venue": "13th International Conference on Knowledge and Systems Engineering (KSE)",
+        "year": "2021",
+        "id": "978-1-66549976-7",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "Effective combination of Bert model and cross-sentence contexts in aspect term extraction",
+        "venue": "International Conference on Data Mining and NLP (ICDM 2021)",
+        "year": "2021",
+        "id": "10.5121/csit.2021.111210",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "Hierarchical Transformer Encoders for Vietnamese Spelling Correction",
+        "venue": "The 34th International Conference on IEA/AIE 2021",
+        "year": "2021",
+        "id": "978-3-03079456-9",
+        "role": "Đồng tác giả"
+      },
+      {
+        "title": "VNLawBERT: A Vietnamese Legal Answer Selection Approach Using BERT Language Model",
+        "venue": "NAFOSTED Conference on Information and Computer Science 2020",
+        "year": "2020",
+        "id": "978-1-66540518-8",
+        "role": "Đồng tác giả"
+      }
+    ]
+  },
+  "signedDate": "15/05/2025"
+}
